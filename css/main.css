@@ -11,17 +11,17 @@ audio[controls],canvas,video {display: inline-block; *display: inline; zoom: 1}
 
 /* BASE */
 html {height: 100%; font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%} /* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
-body {margin: 0; min-height: 100%; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; text-rendering:optimizeLegibility;color: #666} /* Improve default text rendering, handling of kerning pairs and ligatures */
+body {margin: 0; min-height: 100%; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; text-rendering:optimizeLegibility;color: #444} /* Improve default text rendering, handling of kerning pairs and ligatures */
 
 /* DEFAULT FONT SETTINGS */
 /* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
 /* Font-size percentage is based on 16px browser default size */
-body, button, input, select, textarea {font: 100%  'Lato', sans-serif; *font-size: 1em; color: #555} /* IE7 and older can't resize px based text */
+body, button, input, select, textarea {font: 100%  'Lato', sans-serif; *font-size: 1em; color: #444} /* IE7 and older can't resize px based text */
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {margin: 0 0 1.5em; padding: 0}
 
 /* TYPOGRAPHY */
 /* Composed to a scale of 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px and 72px */
-h1, h2, h3, h4, h5, h6 {font-family:'Open Sans', sans-serif;color:#444;}
+h1, h2, h3, h4, h5, h6 {font-family:'Open Sans', sans-serif; color:#000000;}
 h1 {margin: 0; font-size: 3.75em; line-height: 1.2em; margin-bottom: 0.4em} /* 60px / 72px */
 h2 {margin: 0; font-size: 3em; line-height: 1em; margin-bottom: 0.5em} /* 48px / 48px */
 h3 {margin: 0; font-size: 2.25em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 0.6667em} /* 36px / 48px */ 
@@ -69,14 +69,15 @@ dt {font-family:Futura, "Century Gothic", AppleGothic, sans-serif}
 /* HYPERLINKS */
 a { 
   text-decoration: none;
-  color: #E74C3C;
+  color: #4B0082;
   -webkit-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
   -moz-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
   -ms-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
   -o-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
   transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
 }
-a:hover, a:focus, a:active { text-decoration: none; border: none;color: #C0392B }
+a:hover, a:focus, a:active { text-decoration: none; border: none; color: #C0392B }
+
 /* MEDIA */
 figure {margin: 0}
 img, object, embed, video {max-width: 100%; _width: 100%} /* Fluid images */
@@ -91,8 +92,8 @@ ins, mark {text-decoration: none}
 mark {background: #c47529}
 ins {background: #d49855}
 del {text-decoration: line-through}
-::-moz-selection {background: #E74C3C; color: #fff; text-shadow: none} /* selected text */
-::selection {background: #E74C3C; color: #fff; text-shadow: none} /* selected text */
+::-moz-selection {background: #4B0082; color: #fafafa; text-shadow: none} /* selected text */
+::selection {background: ##4B0082; color: #fafafa; text-shadow: none} /* selected text */
 
 /* OTHERS */
 strong, b, dt { font-weight: bold}
@@ -182,6 +183,11 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   opacity: 1;
 }
 
+#logo h2, #logo h4 {
+  color: #fafafa;
+  mix-blend-mode: difference;
+}
+
 /* Tabs */
 .etabs{
   margin: 0;
@@ -193,18 +199,17 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 #tab-data-wrap{
   padding: 30px 20px;
-  background: #fff;
+  background: #fafafa;
   border: 1px solid #f1f1f1;
-  box-shadow: 0px 6px #c0392b;
+  box-shadow: 0px 6px #483D8B;
   border-radius: 0px 0px 4px 4px;
 }
-
 
 .tab {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  background: #fff;
+  background: #fafafa;
   border: solid 1px #f1f1f1;
   border-bottom: 0px;
   -moz-border-radius: 4px 4px 0 0;
@@ -219,7 +224,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   display: block;
   padding: 2px 10px;
   outline: none;
-  color: #888;
+  color: #444;
   text-decoration: none;
 }
 
@@ -228,7 +233,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 
 .tab.active {
-  background: #fff;
+  background: #fafafa;
   position: relative;
   top: 1px;
   border-color: #f1f1f1;
@@ -237,7 +242,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 
 .tab a.active {
   padding-top: 10px;
-  color: #e74c3c;
+  color: #4B0082;
 }
 .tab a i{
   font-size: 16px;
@@ -245,13 +250,24 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 
 /* INFO */
-.info-wrap{
-
+.info h2, #header h2{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: .3em;
 }
+.info h2 {
+  color: #000000;
+  text-align: center;
+}
+
+.info h4 {
+  text-align: center;
+}
+
 /* Photo */
 .photo{
   float: left;
-  height: 200px;
+  height: 100%;
   width: 200px;
   margin-right: 20px;
   overflow: hidden;
@@ -260,19 +276,10 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
  -webkit-border-radius: 4px;
  -moz-border-radius: 4px;
  border-radius: 4px;
+ min-height: 200px;
  width: 100%;
 }
-.info{
 
-}
-.info h2, #header h2{
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: .3em;
-}
-.info h4, #header h4{
-  color: #999;
-}
 /* Contact */
 .main-links{
 
@@ -307,7 +314,6 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 
 }
 /* Item Box */
-
 .item-box{
   padding: 6px 6px 6px 10px;
   border: 1px solid #f1f1f1;
@@ -334,7 +340,16 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .item-box .item-data p{
   margin: 0px;
   font-size: 12px;
-  color: #999;
+  color: #B8860B;
+}
+
+/* Resume */
+#resume p {
+    color: #444;
+}
+
+#resume a h5:hover, #resume a p:hover {
+    color: #C0392B;
 }
 
 /* WorkExperience */
@@ -367,7 +382,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   overflow: hidden;
   width: 100%;
   height: 99%;
-  background-color: rgba(231, 76, 60,.6);
+  background-color: rgba(192, 57, 43,.6);
   text-align: center;
   opacity:0;
   filter: alpha(opacity=0);
@@ -394,6 +409,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   display: inline-block;
   margin-top: -20px;
 }
+
 /* Icon Box */
 .sny-icon{
   display: block;
@@ -413,13 +429,14 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .sny-icon-content p{
   margin-bottom: 0px;
 }
+
 /* Buttons */
 .btn{
   display:inline-block;
   margin: 0 10px 10px 0;    
   padding: 14px 20px;  
-  background: #E74C3C;
-  color: #fff;
+  background: #4B0082;
+  color: #fafafa;
   font-weight: bold;
   font-size: 13px;
   font-family:'Open Sans', sans-serif
@@ -443,14 +460,14 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   font-size: 75%;
   font-weight: 500;
   line-height: 1;
-  color: #ffffff;
+  color: #fafafa;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: #B8860B;
 }
 
 .label-info[href]:hover,
@@ -459,7 +476,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 .label[href]:hover,
 .label[href]:focus {
-  color: #ffffff;
+  color: #fafafa;
   text-decoration: none;
   cursor: pointer;
 }
@@ -483,7 +500,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 
 .label-success {
-  background-color: #5cb85c;
+  background-color: #000080;
 }
 
 .label-success[href]:hover,
@@ -523,7 +540,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 .meter > span  > span{
   margin-left: 4px;
-  color: #fff;
+  color: #fafafa;
 }
 .meter > span:after, .animate > span > span {
   content: "";
@@ -613,8 +630,8 @@ footer{
   text-align: center;
   margin-top: 2em;
   padding: 10px;
-  background: rgba(255, 255, 255,.8);
-  box-shadow: 0px 4px #ccc;
+  background: #fafafa;
+  box-shadow: 0px 4px #483D8B;
   color: #333;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -663,10 +680,10 @@ Change widths as necessary
 
   }
 
-  /* Sidebar */
-  .sidebar{
-   padding-left: 20px;
-   border-left: 1px solid #f1f1f1;
+/* Sidebar */
+.sidebar{
+  padding-left: 20px;
+  border-left: 1px solid #f1f1f1;
  }
  /* COLUMN GRID */
  .g1,.g2,.g3 {display:inline; float: left}
@@ -675,6 +692,10 @@ Change widths as necessary
  .g1 {width:48.0%}
  .g2 {width:48.0%}
  .g3 {width:98.0%}
+}
+
+.g2 {
+    min-height: 285px;
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP */
