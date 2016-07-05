@@ -352,6 +352,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 .work li span{
   float: right;
+  min-width: 61.8px;
 }
 .work li h5{
   float: left;
@@ -644,9 +645,22 @@ Change widths as necessary
 ------------------------------------------- */
 
 /* MOBILE PORTRAIT */
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-device-width: 768px) {
   body {
-
+  }
+  #resume h5 {
+    margin-bottom: .618em;
+  }
+  .photo {
+    float: none;
+    margin: auto;
+  }
+  .work li span {
+    float: left;
+    margin-bottom: .618em;
+  }
+  .work li h5 {
+    width: 100%;
   }
 }
 
@@ -700,15 +714,15 @@ Change widths as necessary
     display: inline;
   }
   .tab a i{
-  font-size: 16px;
-  margin-right: 6px;
-}
+    font-size: 16px;
+    margin: margin-right: 6px;
+  }
   .tab a{
     padding: 10px 40px 10px 40px;
   }
-.tab a.active{
-  padding-top: 20px;
-}
+  .tab a.active{
+    padding-top: 20px;
+  }
   /* 3 COLUMN GRID */
   .g1 {width:31.333%}
   .g2 {width:64.667%;}
