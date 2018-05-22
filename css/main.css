@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -593,12 +593,9 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 
 .emerald > span {
   background-color: #2ecc71;
-
 }
-
 .carrot > span {
   background-color: #e67e22;
-
 }
 .wisteria > span{
   background-color: #8e44ad;
@@ -614,6 +611,9 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 }
 .asbestos > span{
   background-color: #7f8c8d;
+}
+.belize-hole > span{
+background: #2980b9;
 }
 .nostripes > span > span, .nostripes > span:after {
   -webkit-animation: none;
